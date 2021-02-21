@@ -1,2 +1,4 @@
 # DemoNavComponent
-Show how to use nav_graph to navigate around different fragments with exit and pop animations
+Show how to use Navigation Component to navigate around different fragments, where exit and pop animations can be easily embedded into the graph.
+
+<img src="https://github.com/Saranomy/DemoNavComponent/blob/main/image.png" />
