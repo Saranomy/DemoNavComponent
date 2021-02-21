@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.saranomy.demonavcomponent.fragments.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first"/>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.saranomy.demonavcomponent.fragments.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second"/>
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.saranomy.demonavcomponent.fragments.HomeFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/from_left_to_center"
+            app:exitAnim="@anim/from_center_to_half_right"
+            app:popEnterAnim="@anim/from_half_right_to_center"
+            app:popExitAnim="@anim/from_center_to_left" />
+        <action
+            android:id="@+id/action_HomeFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment"
+            app:enterAnim="@anim/from_bottom_to_center"
+            app:exitAnim="@anim/from_normal_to_small"
+            app:popEnterAnim="@anim/from_small_to_normal"
+            app:popExitAnim="@anim/from_center_to_bottom" />
+    </fragment>
+</navigation>
